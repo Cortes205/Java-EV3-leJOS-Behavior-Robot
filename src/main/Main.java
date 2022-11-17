@@ -35,20 +35,20 @@ public class Main
 		Sound.beepSequenceUp();
 		Button.waitForAnyPress();
 		gyro.reset();
-		delay(5000);
+		delay(5000); // a 5 second delay after button press was mandatory for the competition
 		motors.set();
-		Behavior b1 = new Drive();
+		Behavior b1 = new Drive(); // Instantiate behaviours
 		Behavior b2 = new AdjustRight();
 		Behavior b3 = new AdjustLeft();
 		Behavior b4 = new Charge();
 		Behavior b5 = new Patrol();
 		Behavior b6 = new VeerRight();
 		Behavior b7 = new VeerLeft();
-		behaviours = new Arbitrator(new Behavior[]{b1, b2, b3, b4, b5, b6, b7});
-		behaviours.go();
+		behaviours = new Arbitrator(new Behavior[]{b1, b2, b3, b4, b5, b6, b7}); // The arbitrator is what loops through each behaviour
+		behaviours.go(); // Start looping through behaviours
 	}
 	
-	public static void exit()
+	public static void exit() // Allows robot to turn off code no matter what behaviour you are in
 	{
 		if (Button.ESCAPE.isDown())
 		{
