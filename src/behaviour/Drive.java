@@ -9,7 +9,7 @@ public class Drive extends Main implements Behavior
 	private boolean suppressed = false;
 	
 	@Override
-	public boolean takeControl() 
+	public boolean takeControl() // Always runs if no other behaviours are runnning
 	{
 		return true;
 	}
