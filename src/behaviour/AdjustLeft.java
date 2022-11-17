@@ -8,7 +8,7 @@ public class AdjustLeft extends Main implements Behavior
 	private boolean suppressed = false;
 	
 	@Override
-	public boolean takeControl() 
+	public boolean takeControl() // Runs if the right colour sensor sees a non-black colour
 	{
 		return colour.checkRight();
 	}
