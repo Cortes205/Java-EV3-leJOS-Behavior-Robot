@@ -7,6 +7,8 @@ public class Patrol extends Main implements Behavior
 
 	public boolean suppressed = false;
 	
+	// spins around after a certain amount of miliseconds that have been tracked. really just added this for fun and variety
+	
 	@Override
 	public boolean takeControl() 
 	{
