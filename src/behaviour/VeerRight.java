@@ -7,6 +7,8 @@ public class VeerRight extends Main implements Behavior
 
 	private boolean suppressed = false;
 	
+	// if the robot is veering left and no other behaviours need to run then one of the motors will be faster than the other one.
+	
 	@Override
 	public boolean takeControl()
 	{
