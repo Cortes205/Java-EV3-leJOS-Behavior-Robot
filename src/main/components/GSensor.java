@@ -20,13 +20,13 @@ public class GSensor extends EV3GyroSensor
 	public boolean veeringLeft() 
 	{
 		this.getAngleMode().fetchSample(sample, 0);
-		return sample[0] < -5;
+		return sample[0] > 5;
 	}
 	
 	public boolean veeringRight()
 	{
 		this.getAngleMode().fetchSample(sample, 0);
-		return sample[0] > 5;
+		return sample[0] < -5;
 	}
 
 }
